@@ -11,12 +11,15 @@ void print_list(struct node *head) {
 	}
 }
 
-struct node * insert_front(struct node *head, int atFront) {
+struct node * insert_front(struct node *head, char *name, char *artist) {
 	struct node *toInsert = malloc(sizeof(struct node));
 	toInsert->next = head;
-	toInsert->i = atFront;
+	toInsert->name = name;
+	toInsert->artist = artist
 	return toInsert;
 }
+
+
 
 struct node * free_list(struct node *head) {
 	if (head->next != NULL) {
