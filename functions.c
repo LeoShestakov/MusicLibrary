@@ -4,12 +4,11 @@
 #include <stdbool.h>
 
 void print_list(struct node *head) {
-	printf("[");
+	printf("|");
 	while (head->next != NULL) {
-		printf("%d, ", head->i);
+		printf("%s: %s|", head->artist, head->name);
 		head = head->next;
 	}
-	printf("]");
 }
 
 struct node * insert_front(struct node *head, int atFront) {
