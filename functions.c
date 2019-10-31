@@ -19,6 +19,29 @@ struct node * insert_front(struct node *head, char *name, char *artist) {
 	return toInsert;
 }
 
+struct node * insert(struct node *head, char *name, char *artist) {
+	// doesnt work yet
+	struct node *top = malloc(sizeof(struct node));
+	struct node *current = head;
+	while (current != NULL) {
+		if strcmp(artist, current->artist) < 0 {
+			return insert_front(*current, *name, *artist);
+		}
+		else if strcmp(artist, current->artist) == 0 {
+			if strcmp(name, current->name) < 0 {
+				return insert_front(*current, *name, *artist);
+			}
+			else {
+				current = current->next;
+
+			}
+		}
+		else {
+			current = current->next;
+		}
+	}
+}
+
 
 
 struct node * free_list(struct node *head) {
