@@ -56,10 +56,22 @@ struct node * insert(struct node *head, struct node *toInsert) {
 
 struct node * getSong(struct node *head, char *artist, char *name){
 	struct node *current = head;
-	while(current != NULL){
+	while (current != NULL) {
 		if (current->artist == artist && current->name == name){
 			return current;
 		} else {
+			current = current->next;
+		}
+	}
+}
+
+struct node * getSongByArtist(struct node *head, char *artist){
+	struct node *current = head;
+	while (current != NULL) {
+		if (current->artist == artist){
+			return current;
+		} 
+		else {
 			current = current->next;
 		}
 	}
