@@ -1,6 +1,7 @@
 #include "functions.h"
 #include<stdio.h>
 #include<stdlib.h>
+#include<string.h>
 
 int main() {
 	struct node *top = NULL;
@@ -12,17 +13,15 @@ int main() {
 	printf("-----\n");
 
 	// Populating list
-	char* name;
-	char* artist;
-	name = "LAUDER"
-	artist = "JID"
-	top = insert(top, name, artist);
-	printf("Printing list (added %s by %s): ", name, artist);
+	top = insert_front(top, makeSong("lauder", "jid"));
 	print_list(top);
 	printf("\n");
-	}
+	
+	top = insert(top, makeSong("magnolia", "playboi carti"));
+	print_list(top);
+	printf("\n");
+	
 
-	printf("-----\n");
 
 	// top = remove_node(top, 7);
 	// printf("Printing list (removed 7): ");

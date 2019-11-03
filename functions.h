@@ -5,6 +5,9 @@ struct node{
 };
 
 void print_list(struct node *head);
-struct node * insert_front(struct node *head, int atFront);
-struct node * free_list(struct node *head);
-struct node * remove_node(struct node *head, int data);
+struct node * makeSong(char *name, char *artist);
+struct node * insert_front(struct node *head, struct node *toInsert);
+int songcmp(struct node *songA, struct node *songB);
+struct node * insert(struct node *head, struct node *toInsert);
+// struct node * free_list(struct node *head);
+// struct node * remove_node(struct node *head, int data);
