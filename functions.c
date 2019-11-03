@@ -25,36 +25,28 @@ struct node * makeSong(char *name, char *artist) {
 }
 
 int songcmp(struct node *songA, struct node *songB) {
-	if (songA->artist < songB->artist) {
-		return -1;
-	}
-	else if (songA->artist > songB->artist) {
-		return 1;
+	if (strcmp(songA->artist, songB->artist) != 0) {
+		return strcmp(songA->artist, songB->artist);
 	}
 	else {
-		if (songA->name < songB->name) {
-			return -1;
-		}
-		else if (songA->name > songB->name) {
-			return 1;
-		}
+		return strcmp(songA->name, songB->name);
 	}
-	return 0;
 }
 
 struct node * insert(struct node *head, struct node *toInsert) {
-	struct node *current = head->next;
-	struct node *prev = head;
-	struct node * new = insert_front(NULL, toInsert);
+	struct node *current = head;
+	struct node *prev = NULL;
 	if (current == NULL || songcmp(toInsert, current) < 0) {
 		return insert_front(head, toInsert);
 	}
+	prev = current;
+	current = current->next;
 	while (current != NULL && songcmp(toInsert, current) > 0) {
 		prev = current;
 		current = current->next;
 	}
-	new->next = current;
-	prev->next = new;
+	prev->next = toInsert;
+	toInsert->next = current;
 	return head;
 }
 

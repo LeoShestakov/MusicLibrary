@@ -21,6 +21,10 @@ int main() {
 	print_list(top);
 	printf("\n");
 	
+	top = insert(top, makeSong("z", "z guy"));
+	print_list(top);
+	printf("\n");
+	
 
 
 	// top = remove_node(top, 7);
