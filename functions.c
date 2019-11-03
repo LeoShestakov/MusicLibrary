@@ -65,7 +65,7 @@ struct node * getSong(struct node *head, char *artist, char *name){
 }
 
 struct node * getSongByArtist(struct node *head, char *artist){
-	while (head != NULL && artist != head->artist) {
+	while (head != NULL && strcmp(artist, head->artist) != 0) {
 		head = head->next;
 	}
 	return head;
