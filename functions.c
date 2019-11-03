@@ -3,6 +3,7 @@
 #include<stdlib.h>
 #include <stdbool.h>
 #include<string.h>
+#include<time.h>
 
 void print_list(struct node *head) {
 	printf("|");
@@ -55,14 +56,14 @@ struct node * insert(struct node *head, struct node *toInsert) {
 
 
 struct node * getSong(struct node *head, char *artist, char *name){
-	struct node *current = head;
-	while (current != NULL) {
-		if (current->artist == artist && current->name == name){
-			return current;
-		} else {
-			current = current->next;
-		}
+	struct node *toFind = makeSong(name, artist);
+	while (head != NULL && songcmp(toFind, head) != 0) {
+		head = head->next;
 	}
+	free(toFind->name);
+	free(toFind->artist);
+	free(toFind);
+	return head;
 }
 
 struct node * getSongByArtist(struct node *head, char *artist){
