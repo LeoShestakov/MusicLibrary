@@ -33,11 +33,11 @@ int main() {
 	print_list(top);
 	printf("\n");
 
-	printf("-----TESTING GET SONG WITH ARTIST AND NAME-----");
-	printf("%s", getSong(top, "jid", "lauder"));
+	printf("-----TESTING GET SONG WITH ARTIST AND NAME-----\n");
+	printf("%s\n", getSong(top, "jid", "lauder"));
 
-	printf("-----TESTING GET SONG BY ARTIST-----");
-	printf("%s", getSongByArtist(top, "jid"));
+	printf("-----TESTING GET SONG BY ARTIST-----\n");
+	printf("%s\n", getSongByArtist(top, "jid"));
 
 
 
