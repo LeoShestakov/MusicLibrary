@@ -39,6 +39,9 @@ int main() {
 	printf("-----TESTING GET SONG BY ARTIST (SKI MASK)-----\n");
 	printf("| %s : %s |\n", getSongByArtist(top, "ski mask")->artist, getSongByArtist(top, "ski mask")->name);
 
+	printf("-----TESTING GET RANDOM SONG-----\n");
+	struct node *rand = getRandSong(top);
+	printf("| %s : %s |\n", rand->artist, rand->name);
 
 
 	// top = remove_node(top, 7);
