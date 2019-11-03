@@ -37,7 +37,7 @@ int main() {
 	printf("|%s:%s|\n", getSong(top, "jid", "lauder")->artist, getSong(top, "jid", "lauder")->name);
 
 	printf("-----TESTING GET SONG BY ARTIST-----\n");
-	printf("|%s:%s|\n", getSong(top, "jid")->artist, getSong(top, "jid")->name);
+	printf("|%s:%s|\n", getSongByArtist(top, "jid")->artist, getSong(top, "jid")->name);
 
 
 
