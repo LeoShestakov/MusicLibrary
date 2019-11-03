@@ -77,6 +77,19 @@ struct node * getSongByArtist(struct node *head, char *artist){
 	}
 }
 
+struct node * getRandSong(struct node *head) {
+	int length = 0;
+	for (struct node * count = head; count != NULL; count = count->next) {
+		length++
+	}
+	srand(time(NULL));
+	int chosen = rand() % length;
+	for (; count >0; count--) {
+		head = head->next;
+	}
+	return head;
+}
+
 // struct node * free_list(struct node *head) {
 	// if (head->next != NULL) {
 		// head->next = free_list(head->next);
