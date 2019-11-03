@@ -16,23 +16,29 @@ int main() {
 	top = insert(top, makeSong("lauder", "jid"));
 	print_list(top);
 	printf("\n");
-	
+
 	top = insert(top, makeSong("magnolia", "playboi carti"));
 	print_list(top);
 	printf("\n");
-	
+
 	top = insert(top, makeSong("moonlight", "xxxtentacion"));
 	print_list(top);
 	printf("\n");
-	
+
 	top = insert(top, makeSong("nuketown", "ski mask"));
 	print_list(top);
 	printf("\n");
-	
+
 	top = insert(top, makeSong("rip", "playboi carti"));
 	print_list(top);
 	printf("\n");
-	
+
+	printf("-----TESTING GET SONG WITH ARTIST AND NAME-----");
+	printf("%s", getSong(top, jid, lauder));
+
+	printf("-----TESTING GET SONG BY ARTIST-----");
+	printf("%s", getSongByArtist(top, jid));
+
 
 
 	// top = remove_node(top, 7);
