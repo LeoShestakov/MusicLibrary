@@ -34,10 +34,10 @@ int main() {
 	printf("\n");
 
 	printf("-----TESTING GET SONG WITH ARTIST AND NAME-----");
-	printf("%s", getSong(top, jid, lauder));
+	printf("%s", getSong(top, "jid", "lauder"));
 
 	printf("-----TESTING GET SONG BY ARTIST-----");
-	printf("%s", getSongByArtist(top, jid));
+	printf("%s", getSongByArtist(top, "jid"));
 
 
 
