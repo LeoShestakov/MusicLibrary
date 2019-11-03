@@ -6,8 +6,11 @@
 
 void print_list(struct node *head) {
 	printf("|");
+	if (head == NULL) {
+		printf("|");
+	}
 	while (head != NULL) {
-		printf("%s: %s|", head->artist, head->name);
+		printf(" %s: %s |", head->artist, head->name);
 		head = head->next;
 	}
 }
@@ -57,7 +60,7 @@ struct node * getSong(struct node *head, char *artist, char *name){
 		if (current->artist == artist && current->name == name){
 			return current;
 		} else {
-			current = curren->next;
+			current = current->next;
 		}
 	}
 }

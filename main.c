@@ -13,7 +13,7 @@ int main() {
 	printf("-----\n");
 
 	// Populating list
-	top = insert_front(top, makeSong("lauder", "jid"));
+	top = insert(top, makeSong("lauder", "jid"));
 	print_list(top);
 	printf("\n");
 	
@@ -21,7 +21,15 @@ int main() {
 	print_list(top);
 	printf("\n");
 	
-	top = insert(top, makeSong("z", "z guy"));
+	top = insert(top, makeSong("moonlight", "xxxtentacion"));
+	print_list(top);
+	printf("\n");
+	
+	top = insert(top, makeSong("nuketown", "ski mask"));
+	print_list(top);
+	printf("\n");
+	
+	top = insert(top, makeSong("rip", "playboi carti"));
 	print_list(top);
 	printf("\n");
 	
