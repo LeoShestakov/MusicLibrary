@@ -78,7 +78,7 @@ struct node * getRandSong(struct node *head) {
 	}
 	srand(time(NULL));
 	int chosen = rand() % length;
-	for (chosen >0; chosen--) {
+	for (chosen; chosen >0; chosen--) {
 		head = head->next;
 	}
 	return head;
