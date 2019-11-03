@@ -65,11 +65,9 @@ struct node * getSong(struct node *head, char *artist, char *name){
 }
 
 struct node * getSongByArtist(struct node *head, char *artist){
-	struct node *toFind = makeSong(name, artist);
-	while (head != NULL && toFind->artist != head->artist) {
+	while (head != NULL && artist != head->artist) {
 		head = head->next;
 	}
-	free(toFind);
 	return head;
 }
 
