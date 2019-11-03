@@ -60,22 +60,17 @@ struct node * getSong(struct node *head, char *artist, char *name){
 	while (head != NULL && songcmp(toFind, head) != 0) {
 		head = head->next;
 	}
-	free(toFind->name);
-	free(toFind->artist);
 	free(toFind);
 	return head;
 }
 
 struct node * getSongByArtist(struct node *head, char *artist){
-	struct node *current = head;
-	while (current != NULL) {
-		if (current->artist == artist){
-			return current;
-		}
-		else {
-			current = current->next;
-		}
+	struct node *toFind = makeSong(name, artist);
+	while (head != NULL && toFind->artist != head->artist) {
+		head = head->next;
 	}
+	free(toFind);
+	return head;
 }
 
 struct node * getRandSong(struct node *head) {
