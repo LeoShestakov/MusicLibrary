@@ -97,7 +97,7 @@ void shuffle(){
 	for (int i = 0; i<27; i++){
 		if (table[i] != NULL){
 			struct node * r = getRandSong(table[i]);
-			printf("%s:%s|", r->artist, r->name);
+			printf(" %s : %s |", r->artist, r->name);
 		}
 	}
 }

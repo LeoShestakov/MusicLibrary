@@ -90,7 +90,6 @@ int main() {
 	del("never", "jid");
 	printf("New Library: ");
 	printLib();
-	printf("\n");
 	printf("-----TESTING CLEAR-----\n");
 	clear();
 	printf("New Library: ");
