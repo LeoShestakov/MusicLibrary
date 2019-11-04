@@ -74,6 +74,8 @@ int main() {
 	printLib();
 	printf("-----TESTING SEARCH SONG [PLAYBOI CARTI : MAGNOLIA]-----\n");
 	printf("%s : %s\n", search("magnolia", "playboi carti")->artist, search("magnolia", "playboi carti")->name);
-	printf("-----TESTING SEARCH SONG BY ARTIST[XXXTENTACION]-----\n");
+	printf("-----TESTING SEARCH SONG BY ARTIST [XXXTENTACION]-----\n");
 	printf("%s : %s\n", searchByArtist("xxxtentacion")->artist, searchByArtist("xxxtentacion")->name);
+	printf("-----TESTING PRINT LETTER [P]-----\n");
+	printLetter('a');
 }
