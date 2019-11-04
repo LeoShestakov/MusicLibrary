@@ -68,7 +68,10 @@ int main() {
 	add("never", "jid");
 	add("magnolia", "playboi carti");
 	add("moonlight", "xxxtentacion");
+	add("sad", "xxxtentacion");
+	add("division", "jid");
 	add("nuketown", "ski mask");
+	add("faucet failure", "ski mask");
 	add("rip", "playboi carti");
 
 	printf("-----PRINTING INTIALIZED LIBRARY-----\n");
