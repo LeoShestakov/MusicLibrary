@@ -43,6 +43,14 @@ int main() {
 	struct node *rand = getRandSong(top);
 	printf("| %s : %s |\n", rand->artist, rand->name);
 
+	printf("-----TESTING REMOVE SONG [JID: LAUDER]-----\n");
+	printf("List before removal: ")
+	print_list(top);
+	printf("\n");
+	remove_node(top, jid, lauder);
+	printf("List after removal: ");
+	print_list(top);
+
 
 	// top = remove_node(top, 7);
 	// printf("Printing list (removed 7): ");
