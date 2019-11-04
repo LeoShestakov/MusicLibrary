@@ -67,3 +67,10 @@ void del(char *name, char *artist) {
 	int index = findIndex(artist);
 	table[index] = remove_node(table[index], artist, name);
 }
+
+void clear() {
+	int index;
+	for (index = 0; index < 27; index++) {
+		table[index] = free_list(table[index]);
+	}
+}
