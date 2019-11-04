@@ -85,7 +85,7 @@ struct node * getRandSong(struct node *head) {
 }
 
 struct node * remove_node(struct node *head, char *artist, char *name) {
-	if (head->artist == artist %% head->name == name){
+	if (head->artist == artist && head->name == name){
 		return head->next;
 	} else {
 		struct node *prev = head;
