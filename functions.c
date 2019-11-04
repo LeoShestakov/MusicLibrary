@@ -104,10 +104,12 @@ struct node * remove_node(struct node *head, char *artist, char *name) {
 }
 
 struct node * free_list(struct node *head) {
-	if (head->next != NULL) {
-		head->next = free_list(head->next);
-	}
-	free(head);
-
-	return head->next;
+	struct node * current = head;
+    struct node * next = current;
+    while (current != NULL) {
+        next = current->next;
+        free(current);
+        current = next;
+    }
+    return NULL;
 }

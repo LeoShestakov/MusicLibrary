@@ -89,8 +89,8 @@ int main() {
 	printLib();
 	printf("\n");
 	printf("-----TESTING CLEAR-----\n");
+	clear();
 	printf("New Library: ");
-	//clear();
 	printLib();
 	printf("\n");
 }

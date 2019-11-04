@@ -69,8 +69,8 @@ void del(char *name, char *artist) {
 }
 
 void clear() {
-	int index;
-	for (index = 0; index < 27; index++) {
+	int index = 0;
+	for (; index < 27; index++) {
 		table[index] = free_list(table[index]);
 	}
 }

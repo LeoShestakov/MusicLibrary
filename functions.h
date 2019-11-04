@@ -1,7 +1,7 @@
 struct node{
   char name[100];
   char artist[100];
-  struct song_node *next;
+  struct node *next;
 };
 
 void print_list(struct node *head);
