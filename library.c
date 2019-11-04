@@ -43,5 +43,22 @@ struct node * searchByArtist(char *artist) {
 void printLetter(char *letter){
 	int index = findIndex(letter);
 	print_list(table[index]);
-	printf("\n");
+}
+
+void printArtist(char *artist){
+	int index = findIndex(artist);
+	struct node *current = table[index];
+	struct node *new = makeSong("placeholder", "placeholder");
+	struct node *c = new;
+	while(current != NULL){
+		if (strcmp(current->artist, artist) == 0){
+			c->next = current;
+			c = c->next;
+			current = current->next;
+		} else {
+			current = current->next;
+		}
+	}
+	new = remove_node(new, "placeholder", "placeholder");
+	print_list(new);
 }
