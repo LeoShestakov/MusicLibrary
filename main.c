@@ -1,3 +1,4 @@
+#include "library.h"
 #include "functions.h"
 #include<stdio.h>
 #include<stdlib.h>
@@ -62,4 +63,12 @@ int main() {
 	
 	printf("-----MUSIC LIBRARY TESTS-----\n\n");
 	
+	// Populating list
+	add("lauder", "jid");
+	add("magnolia", "playboi carti");
+	add("moonlight", "xxxtentacion");
+	add("nuketown", "ski mask");
+	add("rip", "playboi carti");
+	printLib();
+	printf("%s : %s", search("magnolia", "playboi carti")->artist, search("magnolia", "playboi carti")->name);
 }
