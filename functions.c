@@ -85,33 +85,33 @@ struct node * getRandSong(struct node *head) {
 }
 
 struct node * remove_node(struct node *head, char *artist, char *name) {
-	if (head->artist == artist && head->name == name){
-		struct node *toReturn = head->next;
-		free(head);
-		return toReturn;
-	} else {
-		struct node *prev = head;
-		struct node *current = head->next;
-		bool foundData = 0;
-		while (foundData == 0 && current != NULL) {
-			if (current->artist == artist && current->name == name) {
-				prev->next = current->next;
-				free(current);
-				foundData = 1;
-			}
-			else {
-				prev = current;
-				current = current->next;
-			}
-		}
-		return head;
-	}
+	struct node * toRemove = makeSong(name, artist);
+    struct node * after = head->next;
+    struct node * prev = head;
+
+    if (songcmp(toRemove, head) == 0) {
+        free(head);
+        return after;
+    }
+
+    while (songcmp(toRemove, after) != 0) {
+        prev = after;
+        after = after->next;
+        if (after == NULL) {
+            return head;
+        }
+    }
+
+    prev->next = after->next;
+    free(after);
+    return head;
 }
 
-// struct node * free_list(struct node *head) {
-	// if (head->next != NULL) {
-		// head->next = free_list(head->next);
-	// }
-	// free(head);
-	// return head->next;
-// }
+struct node * free_list(struct node *head) {
+	if (head->next != NULL) {
+		head->next = free_list(head->next);
+	}
+	free(head);
+	
+	return head->next;
+}

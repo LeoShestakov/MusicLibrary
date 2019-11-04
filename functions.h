@@ -12,5 +12,5 @@ struct node * insert(struct node *head, struct node *toInsert);
 struct node * getSong(struct node *head, char *artist, char *name);
 struct node * getSongByArtist(struct node *head, char *artist);
 struct node * getRandSong(struct node *head);
-struct node * free_list(struct node *head);
 struct node * remove_node(struct node *head, char *artist, char *name);
+struct node * free_list(struct node *head);
