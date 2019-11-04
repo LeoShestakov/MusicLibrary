@@ -43,4 +43,5 @@ struct node * searchByArtist(char *artist) {
 void printLetter(char *letter){
 	int index = findIndex(letter);
 	print_list(table[index]);
+	printf("\n");
 }

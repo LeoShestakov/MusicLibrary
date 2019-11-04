@@ -65,6 +65,7 @@ int main() {
 
 	// Populating list
 	add("lauder", "jid");
+	add("never", "jid");
 	add("magnolia", "playboi carti");
 	add("moonlight", "xxxtentacion");
 	add("nuketown", "ski mask");
@@ -78,4 +79,6 @@ int main() {
 	printf("%s : %s\n", searchByArtist("xxxtentacion")->artist, searchByArtist("xxxtentacion")->name);
 	printf("-----TESTING PRINT LETTER [P]-----\n");
 	printLetter("p");
+	printf("-----TESTING PRINT ARTIST [JID]-----\n");
+	printArtist("jid");
 }
