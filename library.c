@@ -74,3 +74,20 @@ void clear() {
 		table[index] = free_list(table[index]);
 	}
 }
+
+struct node * shuffle(){
+  struct node *new = makeSong("placeholder", "placeholder");
+  struct node *c = new;
+  int x = 5;
+  while (x > 0){
+    srand(time(NULL));
+  	int chosen = rand() % 26;
+    if (table[chosen] != NULL){
+      c->next = getRandSong(table[chosen]);
+      c = c->next;
+      x--;
+    }
+  }
+  new = remove_node(new, "placeholder", "placeholder");
+  return new;
+}
