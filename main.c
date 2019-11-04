@@ -44,7 +44,7 @@ int main() {
 	printf("| %s : %s |\n", rand->artist, rand->name);
 
 	printf("-----TESTING REMOVE SONG [JID: LAUDER]-----\n");
-	printf("List before removal: ")
+	printf("List before removal: ");
 	print_list(top);
 	printf("\n");
 	remove_node(top, jid, lauder);
