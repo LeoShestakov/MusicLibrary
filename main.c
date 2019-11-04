@@ -77,5 +77,5 @@ int main() {
 	printf("-----TESTING SEARCH SONG BY ARTIST [XXXTENTACION]-----\n");
 	printf("%s : %s\n", searchByArtist("xxxtentacion")->artist, searchByArtist("xxxtentacion")->name);
 	printf("-----TESTING PRINT LETTER [P]-----\n");
-	printLetter('p');
+	printLetter("p");
 }
