@@ -39,3 +39,8 @@ struct node * searchByArtist(char *artist) {
 	struct node *ans = getSongByArtist(table[index], artist);
 	return ans;
 }
+
+void printLetter(char *letter){
+	int index = findIndex(letter);
+	print_list(table[index]);
+}

@@ -55,21 +55,21 @@ int main() {
 	printf("\n");
 
 	printf("-----\n");
-	
+
 	top = free_list(top);
 	printf("List after freeing all nodes: ");
 	print_list(top);
 	printf("\n\n");
-	
+
 	printf("-----MUSIC LIBRARY TESTS-----\n\n");
-	
+
 	// Populating list
 	add("lauder", "jid");
 	add("magnolia", "playboi carti");
 	add("moonlight", "xxxtentacion");
 	add("nuketown", "ski mask");
 	add("rip", "playboi carti");
-	
+
 	printf("-----PRINTING INTIALIZED LIBRARY-----\n");
 	printLib();
 	printf("-----TESTING SEARCH SONG [PLAYBOI CARTI : MAGNOLIA]-----\n");
@@ -77,5 +77,5 @@ int main() {
 	printf("-----TESTING SEARCH SONG BY ARTIST [XXXTENTACION]-----\n");
 	printf("%s : %s\n", searchByArtist("xxxtentacion")->artist, searchByArtist("xxxtentacion")->name);
 	printf("-----TESTING PRINT LETTER [P]-----\n");
-	printLetter('a');
+	printLetter('p');
 }
