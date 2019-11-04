@@ -47,7 +47,7 @@ int main() {
 	printf("List before removal: ");
 	print_list(top);
 	printf("\n");
-	remove_node(top, "jid", "lauder");
+	top = remove_node(top, "jid", "lauder");
 	printf("List after removal: ");
 	print_list(top);
 	printf("\n");
