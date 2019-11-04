@@ -4,6 +4,7 @@
 #include<string.h>
 
 int main() {
+	printf("-----LINKED LIST TESTS-----\n\n");
 	struct node *top = NULL;
 
 	printf("Printing empty: ");
@@ -57,5 +58,8 @@ int main() {
 	top = free_list(top);
 	printf("List after freeing all nodes: ");
 	print_list(top);
-	printf("\n");
+	printf("\n\n");
+	
+	printf("-----MUSIC LIBRARY TESTS-----\n\n");
+	
 }
