@@ -84,7 +84,7 @@ int main() {
 	printArtist("jid");
 	printf("\n");
 	printf("-----TESTING SHUFFLE-----\n");
-	printf(shuffle());
+	shuffle();
 	printf("\n");
 	printf("-----TESTING DELETE SONG [JID : NEVER]-----\n");
 	del("never", "jid");

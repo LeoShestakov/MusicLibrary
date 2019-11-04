@@ -75,19 +75,29 @@ void clear() {
 	}
 }
 
-struct node * shuffle(){
-  struct node *new = makeSong("placeholder", "placeholder");
-  struct node *c = new;
-  int x = 5;
-  while (x > 0){
-    srand(time(NULL));
-  	int chosen = rand() % 26;
-    if (table[chosen] != NULL){
-      c->next = getRandSong(table[chosen]);
-      c = c->next;
-      x--;
-    }
-  }
-  new = remove_node(new, "placeholder", "placeholder");
-  return new;
+// struct node * shuffle(){
+//   struct node *new = makeSong("placeholder", "placeholder");
+//   struct node *c = new;
+//   int x = 5;
+//   while (x > 0){
+//     srand(time(NULL));
+//   	int chosen = rand() % 27;
+//     if (table[chosen] != NULL){
+//       c->next = getRandSong(table[chosen]);
+//       c = c->next;
+//       x--;
+//     }
+//   }
+//   new = remove_node(new, "placeholder", "placeholder");
+//   return new;
+// }
+
+void shuffle(){
+  printf("|");
+	for (int i = 0; i<27; i++){
+		if (table[i] != NULL){
+			struct node * r = getRandSong(table[i]);
+			printf("%s:%s|", r->artist, r->name);
+		}
+	}
 }

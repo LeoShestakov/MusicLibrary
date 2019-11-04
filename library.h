@@ -9,6 +9,6 @@ struct node * search(char *name, char *artist);
 struct node * searchByArtist(char *artist);
 void printLetter(char* letter);
 void printArtist(char* artist);
-struct node * shuffle();
+void shuffle();
 void del(char *name, char *artist);
 void clear();
