@@ -83,9 +83,9 @@ int main() {
 	printf("-----TESTING PRINT ARTIST [JID]-----\n");
 	printArtist("jid");
 	printf("\n");
-	// printf("-----TESTING DELETE SONG [JID : NEVER]-----\n");
-	// del("never", "jid");
-	// printf("New Library: ");
-	// printLib();
-	// printf("\n");
+	printf("-----TESTING DELETE SONG [JID : NEVER]-----\n");
+	del("never", "jid");
+	printf("New Library: ");
+	printLib();
+	printf("\n");
 }

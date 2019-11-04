@@ -62,3 +62,8 @@ void printArtist(char *artist){
 	new = remove_node(new, "placeholder", "placeholder");
 	print_list(new);
 }
+
+void del(char *name, char *artist) {
+	int index = findIndex(artist);
+	table[index] = remove_node(table[index], artist, name);
+}

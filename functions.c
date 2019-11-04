@@ -6,7 +6,6 @@
 #include<time.h>
 
 void print_list(struct node *head) {
-	printf("|");
 	while (head != NULL) {
 		printf(" %s: %s |", head->artist, head->name);
 		head = head->next;
