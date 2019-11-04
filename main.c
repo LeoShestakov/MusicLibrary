@@ -50,6 +50,7 @@ int main() {
 	remove_node(top, "jid", "lauder");
 	printf("List after removal: ");
 	print_list(top);
+	printf("\n");
 
 
 	// top = remove_node(top, 7);
